@@ -3,7 +3,7 @@ Library        Selenium2Library
 Suite Setup    Open Browser     ${HOME_PAGE}    firefox
 #Test Setup     Go to Login page
 Suite Teardown     Close Browser
-Resource        resource.robot                   #relative path
+Resource        ../resource.robot                   #relative path
 
 *** Test Cases ***
 Login fail
@@ -28,4 +28,4 @@ Test Login fail
     Go to Login page
     Fill input    ${username_input}    ${password_input}
     Click Login
-    Login failed
+    Check login failed

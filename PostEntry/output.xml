@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160211 16:19:38.197" generator="Robot 3.0 (Python 2.7 on win32)">
+<suite source="C:\Users\PHURIDEJ\Desktop\ATDD\ATDD_workshop3\PostEntry\Post_Entry_Success.robot" id="s1" name="Post Entry Success">
+<test id="s1-t1" name="Delete Post Entry">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${HOME_PAGE}</arg>
+<arg>firefox</arg>
+</arguments>
+<msg timestamp="20160211 16:19:39.365" level="INFO">Opening browser 'firefox' to base url 'https://sprint3r10.wordpress.com'</msg>
+<status status="PASS" endtime="20160211 16:19:56.855" starttime="20160211 16:19:39.363"></status>
+</kw>
+<kw name="Login success Not Rememberme" library="resource">
+<kw name="Go to Login page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${HOME_PAGE}</arg>
+</arguments>
+<msg timestamp="20160211 16:19:56.860" level="INFO">Opening url 'https://sprint3r10.wordpress.com'</msg>
+<status status="PASS" endtime="20160211 16:20:01.474" starttime="20160211 16:19:56.859"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="masthead"]/button</arg>
+</arguments>
+<msg timestamp="20160211 16:20:01.476" level="INFO">Clicking element '//*[@id="masthead"]/button'.</msg>
+<status status="PASS" endtime="20160211 16:20:02.167" starttime="20160211 16:20:01.475"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@id="meta-2"]/ul/li[2]/a</arg>
+</arguments>
+<status status="PASS" endtime="20160211 16:20:02.538" starttime="20160211 16:20:02.168"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="meta-2"]/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20160211 16:20:02.540" level="INFO">Clicking element '//*[@id="meta-2"]/ul/li[2]/a'.</msg>
+<status status="PASS" endtime="20160211 16:20:02.924" starttime="20160211 16:20:02.539"></status>
+</kw>
+<status status="PASS" endtime="20160211 16:20:02.925" starttime="20160211 16:19:56.858"></status>
+</kw>
+<kw name="Fill in valid credential" library="resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${USERNAME_FIELD_ID}</arg>
+</arguments>
+<status status="PASS" endtime="20160211 16:20:04.810" starttime="20160211 16:20:02.927"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_FIELD_ID}</arg>
+<arg>sprint3r10</arg>
+</arguments>
+<msg timestamp="20160211 16:20:04.812" level="INFO">Typing text 'sprint3r10' into text field 'user_login'</msg>
+<status status="PASS" endtime="20160211 16:20:05.807" starttime="20160211 16:20:04.811"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD_ID}</arg>
+<arg>WorkingSoftware</arg>
+</arguments>
+<msg timestamp="20160211 16:20:05.809" level="INFO">Typing password into text field 'user_pass'</msg>
+<status status="PASS" endtime="20160211 16:20:06.104" starttime="20160211 16:20:05.808"></status>
+</kw>
+<status status="PASS" endtime="20160211 16:20:06.105" starttime="20160211 16:20:02.925"></status>
+</kw>
+<kw name="Uncheck Remember me" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>rememberme</arg>
+</arguments>
+<msg timestamp="20160211 16:20:06.107" level="INFO">Clicking element 'rememberme'.</msg>
+<status status="PASS" endtime="20160211 16:20:06.431" starttime="20160211 16:20:06.107"></status>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="Selenium2Library">
+<doc>Verifies checkbox identified by `locator` is not selected/checked.</doc>
+<arguments>
+<arg>rememberme</arg>
+</arguments>
+<msg timestamp="20160211 16:20:06.433" level="INFO">Verifying checkbox 'rememberme' is not selected.</msg>
+<status status="PASS" endtime="20160211 16:20:06.623" starttime="20160211 16:20:06.432"></status>
+</kw>
+<status status="PASS" endtime="20160211 16:20:06.624" starttime="20160211 16:20:06.106"></status>
+</kw>
+<kw name="Click login" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>wp-submit</arg>
+</arguments>
+<msg timestamp="20160211 16:20:06.626" level="INFO">Clicking element 'wp-submit'.</msg>
+<status status="PASS" endtime="20160211 16:20:21.878" starttime="20160211 16:20:06.625"></status>
+</kw>
+<status status="PASS" endtime="20160211 16:20:21.878" starttime="20160211 16:20:06.624"></status>
+</kw>
+<kw name="Check login succeeded" library="resource">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${SUCCESS_TEXT}</arg>
+</arguments>
+<status status="PASS" endtime="20160211 16:20:22.016" starttime="20160211 16:20:21.880"></status>
+</kw>
+<status status="PASS" endtime="20160211 16:20:22.016" starttime="20160211 16:20:21.879"></status>
+</kw>
+<status status="PASS" endtime="20160211 16:20:22.017" starttime="20160211 16:19:56.857"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20160211 16:20:22.762" starttime="20160211 16:20:22.018"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@id="menu-posts"]/a/div[3]</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" endtime="20160211 16:20:22.933" starttime="20160211 16:20:22.764"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="menu-posts"]/a/div[3]</arg>
+</arguments>
+<msg timestamp="20160211 16:20:22.936" level="INFO">Clicking element '//*[@id="menu-posts"]/a/div[3]'.</msg>
+<status status="PASS" endtime="20160211 16:20:23.512" starttime="20160211 16:20:22.935"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
+<arguments>
+<arg>css=td.title</arg>
+</arguments>
+<msg timestamp="20160211 16:20:23.514" level="INFO">Simulating Mouse Over on element 'css=td.title'</msg>
+<status status="PASS" endtime="20160211 16:20:32.043" starttime="20160211 16:20:23.514"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=a.submitdelete</arg>
+</arguments>
+<msg timestamp="20160211 16:20:32.045" level="INFO">Clicking element 'css=a.submitdelete'.</msg>
+<status status="PASS" endtime="20160211 16:20:32.754" starttime="20160211 16:20:32.044"></status>
+</kw>
+<status status="PASS" endtime="20160211 16:20:32.762" critical="yes" starttime="20160211 16:19:39.357"></status>
+</test>
+<status status="PASS" endtime="20160211 16:20:32.769" starttime="20160211 16:19:38.207"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Post Entry Success" pass="1">Post Entry Success</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
