@@ -2,7 +2,7 @@
 ${HOME_PAGE}           https://sprint3r3.wordpress.com
 ${USERNAME_FIELD_ID}    user_login
 ${PASSWORD_FIELD_ID}    user_pass
-${SUCCESS_TEXT}         Welcome Page
+${SUCCESS_TEXT}         Welcome to WordPress.com!
 ${ERROR_TEXT}           Error Page
 
 *** Keywords ***
@@ -24,6 +24,6 @@ Fill input
 Click login
     Click Element    wp-submit
 Login succeeded
-    Wait Until Page Contains     Dashboard
+    Wait Until Page Contains     ${SUCCESS_TEXT}
 Login failed
     Wait Until Page Contains   ${ERROR_TEXT}
